@@ -1,0 +1,8 @@
+{
+  "exam_id": "PY-EXAM-001",
+  "questions": [
+    "What is 2 + 2?",
+    "What keyword handles exceptions?",
+    "Which type is immutable?"
+  ]
+}
