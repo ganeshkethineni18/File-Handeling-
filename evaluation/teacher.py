@@ -2,14 +2,27 @@ import json
 import os
 from datetime import datetime
 
-SUBMISSIONS_FOLDER = "submissions"
-ANSWER_KEYS_FOLDER = "answer_keys"
-RESULT_FILE = "final_results.json"
 
-# -------------------------------
-# STEP 1: Select answer key
-# -------------------------------
-answer_key_files = [f for f in os.listdir(ANSWER_KEYS_FOLDER) if f.endswith(".json")]
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+SUBMISSIONS_FOLDER = os.path.join(BASE_DIR, "submissions")
+ANSWER_KEYS_FOLDER = os.path.join(BASE_DIR, "answer_keys")
+RESULT_FILE = os.path.join(BASE_DIR, "final_results.json")
+
+
+if not os.path.exists(ANSWER_KEYS_FOLDER):
+    print("❌ answer_keys folder not found.")
+    exit()
+
+if not os.path.exists(SUBMISSIONS_FOLDER):
+    print("❌ submissions folder not found.")
+    exit()
+
+
+answer_key_files = [
+    f for f in os.listdir(ANSWER_KEYS_FOLDER)
+    if f.endswith(".json")
+]
 
 if not answer_key_files:
     print("❌ No answer keys found.")
@@ -33,9 +46,7 @@ correct_answers = answer_key["answers"]
 marks_per_question = answer_key["marks_per_question"]
 exam_id = answer_key["exam_id"]
 
-# -------------------------------
-# STEP 2: Evaluate submissions
-# -------------------------------
+
 results = []
 
 for file_name in os.listdir(SUBMISSIONS_FOLDER):
@@ -46,7 +57,7 @@ for file_name in os.listdir(SUBMISSIONS_FOLDER):
         submission = json.load(file)
 
     if submission["exam_id"] != exam_id:
-        continue  # skip other exams
+        continue
 
     student_answers = submission["answers"]
     score = 0
@@ -67,9 +78,7 @@ for file_name in os.listdir(SUBMISSIONS_FOLDER):
         "time_taken_seconds": time_taken
     })
 
-# -------------------------------
-# STEP 3: Save final results
-# -------------------------------
+
 with open(RESULT_FILE, "w", encoding="utf-8") as file:
     json.dump(results, file, indent=4)
 
