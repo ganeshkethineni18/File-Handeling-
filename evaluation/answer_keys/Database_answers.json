@@ -1,0 +1,37 @@
+{
+  "exam_id": "DB-EXAM-002",
+  "answers": [
+    "Database Management System",
+    "Primary Key",
+    "Relational",
+    "2NF",
+    "3NF",
+    "Links two tables",
+    "SQL",
+    "HTML",
+    "Hierarchical",
+    "ACID",
+    "Database",
+    "Foreign Key",
+    "Select",
+    "Composite Key",
+    "NoSQL",
+    "4NF",
+    "CREATE",
+    "INSERT",
+    "Schema",
+    "Record",
+    "Attribute",
+    "Relational DB",
+    "Internal",
+    "Atomicity",
+    "Index",
+    "View",
+    "COMMIT",
+    "ROLLBACK",
+    "NoSQL",
+    "Network"
+  ],
+  "marks_per_question": 1
+}
+

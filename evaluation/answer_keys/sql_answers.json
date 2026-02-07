@@ -1,0 +1,37 @@
+{
+  "exam_id": "SQL-EXAM-002",
+  "answers": [
+    "SELECT",
+    "WHERE",
+    "TRUNCATE",
+    "COUNT()",
+    "ORDER BY",
+    "GROUP BY",
+    "DROP",
+    "INNER JOIN",
+    "LEFT JOIN",
+    "HAVING",
+    "INSERT",
+    "UPDATE",
+    "DELETE",
+    "Primary Key",
+    "Foreign Key",
+    "UNIQUE",
+    "NOT NULL",
+    "ALTER",
+    "AVG()",
+    "LIKE",
+    "_",
+    "%",
+    "CREATE TABLE",
+    "DROP DATABASE",
+    "FULL OUTER JOIN",
+    "MAX()",
+    "MIN()",
+    "LIMIT",
+    "RENAME",
+    "3NF"
+  ],
+  "marks_per_question": 1
+}
+

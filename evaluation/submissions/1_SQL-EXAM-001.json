@@ -1,11 +1,36 @@
 {
-    "exam_id": "SQL-EXAM-001",
-    "student_name": "ganesh",
-    "roll_no": "1",
-    "start_time": "2026-01-21T10:03:48.054971",
-    "end_time": "2026-01-21T10:04:22.083262",
-    "answers": [
-        "show what we desire from the table",
-        "where "
-    ]
+  "exam_id": "SQL-EXAM-002",
+  "topic": "SQL Comprehensive Test",
+  "questions": [
+    {"question": "Which SQL statement is used to retrieve data?", "options": ["GET", "SELECT", "FETCH", "OPEN"]},
+    {"question": "Which clause filters rows?", "options": ["ORDER BY", "GROUP BY", "WHERE", "HAVING"]},
+    {"question": "Which command deletes all records but keeps table structure?", "options": ["DELETE", "DROP", "REMOVE", "TRUNCATE"]},
+    {"question": "Which function returns total number of rows?", "options": ["SUM()", "COUNT()", "TOTAL()", "ROWS()"]},
+    {"question": "Which keyword sorts results?", "options": ["ORDER BY", "SORT", "ARRANGE", "GROUP BY"]},
+    {"question": "Which clause groups rows?", "options": ["GROUP BY", "ORDER BY", "WHERE", "JOIN"]},
+    {"question": "Which command removes a table completely?", "options": ["DELETE", "DROP", "REMOVE", "CLEAR"]},
+    {"question": "Which join returns matching rows from both tables?", "options": ["LEFT JOIN", "RIGHT JOIN", "INNER JOIN", "FULL JOIN"]},
+    {"question": "Which join returns all rows from left table?", "options": ["LEFT JOIN", "RIGHT JOIN", "INNER JOIN", "CROSS JOIN"]},
+    {"question": "Which clause filters grouped results?", "options": ["WHERE", "HAVING", "ORDER BY", "GROUP BY"]},
+    {"question": "Which SQL command adds new data?", "options": ["ADD", "INSERT", "PUT", "UPDATE"]},
+    {"question": "Which command modifies existing records?", "options": ["MODIFY", "CHANGE", "UPDATE", "ALTER"]},
+    {"question": "Which command removes specific rows?", "options": ["DELETE", "DROP", "TRUNCATE", "CLEAR"]},
+    {"question": "Which key uniquely identifies a record?", "options": ["Foreign Key", "Primary Key", "Candidate Key", "Alternate Key"]},
+    {"question": "Which key links two tables?", "options": ["Primary Key", "Foreign Key", "Unique Key", "Composite Key"]},
+    {"question": "Which constraint prevents duplicate values?", "options": ["PRIMARY KEY", "UNIQUE", "CHECK", "DEFAULT"]},
+    {"question": "Which keyword is used to prevent NULL values?", "options": ["NOT EMPTY", "NOT NULL", "NO NULL", "REQUIRED"]},
+    {"question": "Which command changes table structure?", "options": ["ALTER", "UPDATE", "MODIFY", "CHANGE"]},
+    {"question": "Which function calculates average?", "options": ["AVG()", "MEAN()", "AVERAGE()", "SUM()"]},
+    {"question": "Which operator is used for pattern matching?", "options": ["LIKE", "MATCH", "SIMILAR", "SEARCH"]},
+    {"question": "Which wildcard represents single character?", "options": ["%", "_", "*", "#"]},
+    {"question": "Which wildcard represents multiple characters?", "options": ["_", "%", "#", "?"]},
+    {"question": "Which statement creates a table?", "options": ["CREATE TABLE", "NEW TABLE", "MAKE TABLE", "BUILD TABLE"]},
+    {"question": "Which command removes database?", "options": ["DELETE DATABASE", "DROP DATABASE", "REMOVE DATABASE", "CLEAR DATABASE"]},
+    {"question": "Which join returns all rows from both tables?", "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL OUTER JOIN"]},
+    {"question": "Which function returns maximum value?", "options": ["MAX()", "TOP()", "HIGH()", "UPPER()"]},
+    {"question": "Which function returns minimum value?", "options": ["LOW()", "MIN()", "BOTTOM()", "SMALL()"]},
+    {"question": "Which SQL clause limits number of rows?", "options": ["TOP", "LIMIT", "RESTRICT", "FIRST"]},
+    {"question": "Which statement renames a table?", "options": ["RENAME", "ALTER", "CHANGE", "MODIFY"]},
+    {"question": "Which normal form removes transitive dependency?", "options": ["1NF", "2NF", "3NF", "BCNF"]}
+  ]
 }

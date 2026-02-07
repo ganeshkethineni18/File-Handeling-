@@ -1,10 +1,36 @@
 {
-    "exam_id": "PY-EXAM-001",
-    "student_name": "ganesh",
-    "roll_no": "1",
-    "answers": [
-        "4",
-        "try",
-        "tupple"
-    ]
+  "exam_id": "PY-EXAM-002",
+  "topic": "Python Comprehensive Test",
+  "questions": [
+    {"question": "Which data type is immutable?", "options": ["list", "set", "tuple", "dict"]},
+    {"question": "What is the output of print(type([]))?", "options": ["<class 'list'>", "<class 'tuple'>", "<class 'dict'>", "<class 'set'>"]},
+    {"question": "Which keyword is used for inheritance?", "options": ["extends", "super", "class", "None of the above"]},
+    {"question": "Which function converts string to integer?", "options": ["str()", "int()", "float()", "bool()"]},
+    {"question": "Which loop is used when number of iterations is unknown?", "options": ["for", "while", "do-while", "foreach"]},
+    {"question": "What does len() return?", "options": ["Memory size", "Length", "Index", "Type"]},
+    {"question": "Which symbol is used for comments?", "options": ["//", "#", "/*", "--"]},
+    {"question": "Which method adds element to list?", "options": ["add()", "append()", "insert()", "extend()"]},
+    {"question": "Which of the following is a dictionary?", "options": ["[]", "{}", "()", "<>"]},
+    {"question": "What is the output of 3 == 3.0?", "options": ["True", "False", "Error", "None"]},
+    {"question": "Which module is used for math functions?", "options": ["math", "calc", "numbers", "numeric"]},
+    {"question": "Which keyword is used to handle exceptions?", "options": ["try", "catch", "handle", "error"]},
+    {"question": "Which function reads user input?", "options": ["scan()", "input()", "read()", "get()"]},
+    {"question": "What is slicing?", "options": ["Copying list", "Extracting part of sequence", "Deleting items", "Sorting list"]},
+    {"question": "Which operator is exponentiation?", "options": ["^", "**", "//", "%"]},
+    {"question": "Which data type stores key-value pairs?", "options": ["list", "tuple", "dict", "set"]},
+    {"question": "Which keyword creates a function?", "options": ["func", "define", "def", "function"]},
+    {"question": "Which method removes last list element?", "options": ["remove()", "delete()", "pop()", "discard()"]},
+    {"question": "Which is used for file handling?", "options": ["open()", "file()", "readfile()", "handle()"]},
+    {"question": "Which is not a Python data type?", "options": ["int", "float", "char", "bool"]},
+    {"question": "Which statement exits loop?", "options": ["break", "exit", "stop", "return"]},
+    {"question": "What does range(5) generate?", "options": ["0-5", "1-5", "0-4", "1-4"]},
+    {"question": "Which is used to define a class?", "options": ["object", "class", "define", "struct"]},
+    {"question": "Which operator is floor division?", "options": ["/", "//", "%", "**"]},
+    {"question": "Which function converts to float?", "options": ["int()", "str()", "float()", "bool()"]},
+    {"question": "Which is mutable?", "options": ["tuple", "string", "list", "int"]},
+    {"question": "Which function gives absolute value?", "options": ["abs()", "fabs()", "absolute()", "mod()"]},
+    {"question": "Which is correct variable name?", "options": ["1var", "var_1", "var-1", "@var"]},
+    {"question": "Which method sorts a list?", "options": ["sort()", "arrange()", "order()", "sortedlist()"]},
+    {"question": "Which keyword is used for anonymous function?", "options": ["lambda", "func", "anon", "def"]}
+  ]
 }
