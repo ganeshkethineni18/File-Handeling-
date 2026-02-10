@@ -16,22 +16,35 @@ if not os.path.exists(EXAMS_FOLDER):
     print("❌ Exams folder not found.")
     exit()
 
-exam_files = [f for f in os.listdir(EXAMS_FOLDER) if f.endswith(".json")]
+exam_files = sorted([f for f in os.listdir(EXAMS_FOLDER) if f.endswith(".json")])
 
 if not exam_files:
     print("❌ No exam papers found.")
     exit()
 
+# ---------------------------------
+# Show Available Exams (with topic)
+# ---------------------------------
 print("\nAvailable Exams:")
-for i, exam in enumerate(exam_files, start=1):
-    print(f"{i}. {exam}")
+
+exam_metadata = []
+
+for i, exam_file in enumerate(exam_files, start=1):
+    try:
+        with open(os.path.join(EXAMS_FOLDER, exam_file), "r", encoding="utf-8") as f:
+            data = json.load(f)
+            topic = data.get("topic", "N/A")
+            exam_metadata.append((exam_file, topic))
+            print(f"{i}. {exam_file}  |  Topic: {topic}")
+    except Exception:
+        print(f"{i}. {exam_file}  |  (Error reading file)")
 
 # ---------------------------------
 # Select Exam
 # ---------------------------------
 try:
     choice = int(input("\nSelect exam number: "))
-    selected_exam_file = exam_files[choice - 1]
+    selected_exam_file = exam_metadata[choice - 1][0]
 except (ValueError, IndexError):
     print("❌ Invalid selection.")
     exit()
@@ -59,36 +72,48 @@ if not student_name or not roll_no:
     exit()
 
 # ---------------------------------
-# Start Time
+# Prevent Duplicate Submission
+# ---------------------------------
+os.makedirs(SUBMISSIONS_FOLDER, exist_ok=True)
+filename = f"{roll_no}_{exam_data['exam_id']}.json"
+filepath = os.path.join(SUBMISSIONS_FOLDER, filename)
+
+if os.path.exists(filepath):
+    print("❌ Exam already submitted for this roll number.")
+    exit()
+
+# ---------------------------------
+# Start Exam
 # ---------------------------------
 start_time = datetime.now()
 
-# ---------------------------------
-# Show Questions
-# ---------------------------------
-print("\n" + "-" * 40)
-print("Exam ID:", exam_data["exam_id"])
-print("Topic:", exam_data.get("topic", "N/A"))
-print("-" * 40 + "\n")
+print("\n" + "=" * 50)
+print(f"Exam ID: {exam_data['exam_id']}")
+print(f"Topic  : {exam_data.get('topic', 'N/A')}")
+print("=" * 50 + "\n")
 
 student_answers = []
 
 for index, q in enumerate(exam_data["questions"], start=1):
     print(f"Q{index}. {q['question']}")
-    
+
     for opt_index, option in enumerate(q["options"], start=1):
         print(f"   {opt_index}. {option}")
-    
-    try:
-        choice = int(input("Select option number: "))
-        selected_answer = q["options"][choice - 1]
-    except (ValueError, IndexError):
-        print("Invalid choice. Marked as blank.")
-        selected_answer = ""
+
+    # Force valid input
+    while True:
+        try:
+            choice = int(input("Select option number: "))
+            if 1 <= choice <= len(q["options"]):
+                selected_answer = q["options"][choice - 1]
+                break
+            else:
+                print("⚠️ Invalid option number. Try again.")
+        except ValueError:
+            print("⚠️ Please enter a valid number.")
 
     student_answers.append(selected_answer)
     print()
-
 
 # ---------------------------------
 # End Time
@@ -110,15 +135,6 @@ exam_record = {
 # ---------------------------------
 # Save Submission
 # ---------------------------------
-os.makedirs(SUBMISSIONS_FOLDER, exist_ok=True)
-
-filename = f"{roll_no}_{exam_data['exam_id']}.json"
-filepath = os.path.join(SUBMISSIONS_FOLDER, filename)
-
-if os.path.exists(filepath):
-    print("❌ Exam already submitted for this roll number.")
-    exit()
-
 try:
     with open(filepath, "w", encoding="utf-8") as file:
         json.dump(exam_record, file, indent=4)
