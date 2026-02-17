@@ -1,0 +1,22 @@
+{
+  "exam_id": "PANDAS-EXAM-001",
+  "topic": "Pandas Fundamentals",
+  "questions": [
+    {"question": "Which library is used for data analysis?", "options": ["numpy", "pandas", "matplotlib", "os"]},
+    {"question": "Which structure is 2D in pandas?", "options": ["Series", "DataFrame", "Array", "List"]},
+    {"question": "Which function reads CSV file?", "options": ["read_csv()", "open_csv()", "load_csv()", "import_csv()"]},
+    {"question": "Which function shows first rows?", "options": ["head()", "top()", "first()", "show()"]},
+    {"question": "Which function shows last rows?", "options": ["tail()", "last()", "end()", "bottom()"]},
+    {"question": "Which function gives summary info?", "options": ["info()", "summary()", "describe()", "details()"]},
+    {"question": "Which function gives statistics?", "options": ["info()", "describe()", "stats()", "analyze()"]},
+    {"question": "Which function selects column?", "options": ["df['col']", "df(col)", "df.col()", "select(col)"]},
+    {"question": "Which removes missing values?", "options": ["dropna()", "removena()", "deletena()", "cleanna()"]},
+    {"question": "Which fills missing values?", "options": ["fillna()", "addna()", "putna()", "replacena()"]},
+    {"question": "Which saves dataframe to CSV?", "options": ["to_csv()", "save_csv()", "write_csv()", "export_csv()"]},
+    {"question": "Which gives dataframe shape?", "options": ["shape", "size", "len", "count"]},
+    {"question": "Which selects rows by index?", "options": ["iloc", "loc", "index", "select"]},
+    {"question": "Which selects rows by label?", "options": ["loc", "iloc", "label", "index"]},
+    {"question": "Which merges dataframes?", "options": ["merge()", "join()", "combine()", "concat()"]}
+  ]
+}
+

@@ -1,0 +1,21 @@
+{
+  "exam_id": "FILE-EXAM-001",
+  "topic": "Python File Handling",
+  "questions": [
+    {"question": "Which function opens file?", "options": ["open()", "file()", "read()", "load()"]},
+    {"question": "Which mode is read mode?", "options": ["r", "w", "a", "x"]},
+    {"question": "Which mode is write mode?", "options": ["w", "r", "a", "x"]},
+    {"question": "Which mode is append mode?", "options": ["a", "w", "r", "x"]},
+    {"question": "Which reads entire file?", "options": ["read()", "readline()", "readlines()", "get()"]},
+    {"question": "Which reads single line?", "options": ["readline()", "read()", "get()", "line()"]},
+    {"question": "Which closes file?", "options": ["close()", "end()", "stop()", "exit()"]},
+    {"question": "Which writes to file?", "options": ["write()", "append()", "put()", "add()"]},
+    {"question": "Which reads JSON file?", "options": ["json.load()", "json.read()", "json.open()", "json.get()"]},
+    {"question": "Which writes JSON file?", "options": ["json.dump()", "json.write()", "json.save()", "json.put()"]},
+    {"question": "Which checks file exists?", "options": ["os.path.exists()", "os.exists()", "file.exists()", "exists()"]},
+    {"question": "Which creates folder?", "options": ["os.mkdir()", "os.make()", "mkdir()", "create()"]},
+    {"question": "Which creates folder safely?", "options": ["os.makedirs()", "os.mkdir()", "mkdir()", "makefolder()"]},
+    {"question": "Which module handles files?", "options": ["os", "file", "sys", "io"]},
+    {"question": "Which reads CSV in pandas?", "options": ["read_csv()", "open_csv()", "load_csv()", "import_csv()"]}
+  ]
+}
