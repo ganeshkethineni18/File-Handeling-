@@ -2,7 +2,23 @@
   "exam_id": "SQL-EXAM-001",
   "topic": "SQL Basics",
   "questions": [
-    "What does SELECT do?",
-    "Which clause filters rows?"
+    {
+      "question": "What does SELECT do?",
+      "options": [
+        "Fetch data",
+        "Delete table",
+        "Update row",
+        "Drop database"
+      ]
+    },
+    {
+      "question": "Which clause filters rows?",
+      "options": [
+        "WHERE",
+        "ORDER BY",
+        "GROUP BY",
+        "HAVING"
+      ]
+    }
   ]
 }

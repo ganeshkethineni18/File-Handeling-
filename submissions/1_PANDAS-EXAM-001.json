@@ -1,0 +1,24 @@
+{
+    "exam_id": "PANDAS-EXAM-001",
+    "student_name": "ganesh",
+    "roll_no": "1",
+    "start_time": "2026-02-20T22:38:48.181273",
+    "end_time": "2026-02-20T22:40:18.515206",
+    "answers": [
+        "numpy",
+        "DataFrame",
+        "read_csv()",
+        "show()",
+        "tail()",
+        "summary()",
+        "info()",
+        "df['col']",
+        "dropna()",
+        "replacena()",
+        "export_csv()",
+        "size",
+        "iloc",
+        "loc",
+        "concat()"
+    ]
+}
