@@ -1,0 +1,21 @@
+{
+  "exam_id": "PANDAS-EXAM-001",
+  "marks_per_question": 1,
+  "answers": [
+    "pandas",
+    "DataFrame",
+    "read_csv()",
+    "head()",
+    "tail()",
+    "info()",
+    "describe()",
+    "df['col']",
+    "dropna()",
+    "fillna()",
+    "to_csv()",
+    "shape",
+    "iloc",
+    "loc",
+    "merge()"
+  ]
+}
